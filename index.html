@@ -82,7 +82,7 @@
                     </svg>
             </a>
             <div class="header__content-wrapper">
-                <button class="header__link header__link-burger">Product<ion-icon name="chevron-down-outline"></ion-icon></button>
+                <button class="header__link header__link-burger" onclick="burger(1)">Product<ion-icon name="chevron-down-outline"></ion-icon></button>
                 <ul class="header__burger-menu burger-menu  burger-menu--close">
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">Database</a>
@@ -99,7 +99,7 @@
                 </ul>
             </div>
             <div class="header__content-wrapper">
-                <button class="header__link header__link-burger">Developers<ion-icon name="chevron-down-outline"></ion-icon></button>
+                <button class="header__link header__link-burger" onclick="burger(2)">Developers<ion-icon name="chevron-down-outline"></ion-icon></button>
                 <ul class="header__burger-menu burger-menu burger-menu--close">
                     <li class="burger-menu__item">
                         <a href="#" class="burger-menu__link">Documentation</a>
@@ -501,7 +501,7 @@
                 <span class="footer__license">© Supabase Inc</span>
                 <span class="footer__theme theme">
                     <ion-icon name="sunny"></ion-icon>
-                    <button class="theme__switcher theme__switcher--dark">
+                    <button class="theme__switcher theme__switcher--dark" id="switcher" onclick="Theme()">
                         <span class="theme__circle"></span>
                     </button>
                     <ion-icon name="moon"></ion-icon>

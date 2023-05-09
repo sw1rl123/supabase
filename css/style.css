@@ -19,6 +19,8 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -34,6 +36,14 @@ body {
   font-style: normal;
   overflow-x: hidden;
   background: var(--col-main);
+}
+
+.theme--light {
+  --col-main: #ffffff;
+  --col-minor: #181818;
+  --col-main-dark: #cccccc;
+  --col-font: #444444;
+  --col-bg-dark: #3bbd83;
 }
 
 .header {
@@ -96,9 +106,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  position: relative;
 }
 
 .header__link:hover {
@@ -122,21 +133,36 @@ body {
   left: -5px;
   top: -3px;
   background: var(--col-main-dark);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--col-font);
   padding: 30px 5px 5px 5px;
   border-radius: 6px;
   line-height: 1.4;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  opacity: 1;
 }
 
 .burger-menu--close {
   height: 0px;
-  padding-top: 20px;
-  display: none;
+  padding-top: 15px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger-menu__item {
+  margin-top: 10px;
+}
+
+.burger-menu__link {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu__link:hover {
+  color: var(--col-font-gray);
 }
 
 .header__getstarted {
@@ -964,6 +990,7 @@ body {
   top: 2px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  right: 22px;
 }
 
 .theme__switcher--dark .theme__circle {
