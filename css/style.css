@@ -153,13 +153,143 @@ body {
 
 .button {
   background: var(--col-button);
-  padding: 7px 11px;
+  padding: 0.7em 1em;
   border-radius: 4px;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
+  color: white;
 }
 
 .button:hover {
   background: var(--col-button-hov);
   color: white;
+}
+
+.hero {
+  margin-bottom: 96px;
+  padding-top: 128px;
+}
+
+.hero__wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 35px;
+}
+
+.hero__subheading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--col-minor);
+  margin-bottom: 28px;
+}
+
+.hero__icon {
+  margin-right: 12px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.hero__heading {
+  color: var(--col-minor);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 52px;
+}
+
+.hero__description {
+  color: var(--col-font);
+  max-width: 422px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.hero__button {
+  display: block;
+  margin-top: 64px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  margin-left: 45px;
+}
+
+.hero__image {
+  position: absolute;
+  right: 80px;
+  top: 0;
+}
+
+.benefits {
+  margin-bottom: 96px;
+}
+
+.benefits__wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.benefits__item {
+  width: 280px;
+  padding-bottom: 16px;
+  color: var(--col-font);
+}
+
+.benefits__item ion-icon {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.benefit__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.benefit__icon {
+  margin-bottom: 16px;
+}
+
+.benefit__heading {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--col-minor);
+  margin-bottom: 16px;
+}
+
+.benefit__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 260px;
+}
+
+.benefit__description--small {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 28px;
 }
