@@ -272,6 +272,69 @@
                </div>
             </div>                      
         </section>
+
+        <section class="APIs">
+            <div class="APIs__wrapper">
+                <div class="APIs__content-wrapper">
+                    <h2 class="APIs__heading">Simple and convenient APIs</h2>
+                    <p class="APIs__description">Built from the ground-up for interoperable authentication.</p>
+                    <p class="APIs__literally">Fast and easy to implement using our powerful library clients. Asset optimization and image transformation coming soon!</p>
+                    <ul class="APIs__list">
+                        <li class="APIs__item card">
+                            <img src="img/wifi.png" alt="" class="card__icon">
+                            <h3 class="card__heading">CDN integration</h3>
+                            <p class="card__description">Serve from the edge to reduce latency.</p>
+                            <a href="" class="card__button">Coming soon</a>
+                        </li>
+                        <li class="APIs__item card">
+                            <img src="img/arrows.png" alt="" class="card__icon">
+                            <h3 class="card__heading card__heading--small">Auto transformation & optimisation</h3>
+                            <p class="card__description">Resize and compress your media before you serve it.</p>
+                            <a href="" class="card__button">Coming soon</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="APIs__content-wrapper board">
+                    <nav class="board__navigation">
+                        <ul class="board__list">
+                           <li class="board__item"><button class="board__button board__button--active">Upload a file</button></li>
+                           <li class="board__item"><button class="board__button">Download a file</button></li>
+                           <li class="board__item"><button class="board__button">List files</button></li>
+                           <li class="board__item"><button class="board__button">Move and rename files</button></li>
+                           <li class="board__item"><button class="board__button">Delete files</button></li>
+                        </ul>
+                    </nav>
+                    <div class="board__frame frame">
+                        <button class="frame__copy"><ion-icon name="copy-outline"></ion-icon>Copy</button>
+                        <ul class="frame__numbers">
+                            <li class="frame__item">1</li>
+                            <li class="frame__item">2</li>
+                            <li class="frame__item">3</li>
+                            <li class="frame__item">4</li>
+                            <li class="frame__item">5</li>
+                            <li class="frame__item">6</li>
+                            <li class="frame__item">7</li>
+                            <li class="frame__item">8</li>
+                            <li class="frame__item">9</li>
+                            <li class="frame__item">10</li>
+                            <li class="frame__item">11</li>
+                            <li class="frame__item">12</li>
+                            <li class="frame__item">13</li>
+                        </ul>
+                        <pre>
+                            <code class="board__code">
+<span class="code-col-comment">// Upload an image to the "avatars" bucket</span>
+<span class="code-col-type">const</span>spaceCat = event.target.files[0]
+<span class="code-col-type">const</span>{ data, error } = <span class="code-col-type">await</span>supabase
+.storage
+.from( <span class="code-col-text">'avatars'</span>)
+.upload( <span class="code-col-text">'space-cat.png'</span>, spaceCat)
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
