@@ -2,11 +2,15 @@
 
 :root {
     --col-main: #181818;
+    --col-main-dark: #2A2A2A;
+    --col-bg-dark: #1f1f1f;
     --col-minor: #ffffff;
     --col-font: #e0e0e0;
-    --col-font-gray: #6a6a6a;
+    --col-font-gray: #666666;
     --col-button: #24B47E;
     --col-button-hov: #19815a;
+    --col-blue: #1374ef;
+    --col-blue-hov: #0b4790;
 }
 
 $wrapper-width: 1280px;
@@ -106,7 +110,7 @@ body {
     position: absolute;
     left: -5px;
     top: -3px;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--col-main-dark);
     font-size: 14px;
     color: var(--col-font);
     padding: 30px 5px 5px 5px;
@@ -208,6 +212,7 @@ body {
 }
 
 .benefits {
+    padding-bottom: 96px;
     margin-bottom: 96px;
 }
 
@@ -263,4 +268,214 @@ body {
     font-weight: 400;
     font-size: 13px;
     line-height: 28px;
+}
+
+.objects {
+    margin-bottom: 96px;
+}
+
+.objects__wrapper {
+    max-width: $wrapper-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.objects__heading {
+    color: var(--col-minor);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 16px;
+}
+
+.objects__description {
+    color: var(--col-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.objects__literally {
+    color: var(--col-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 64px;
+}
+
+.examples {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board {
+    width: 560px;
+    position: relative;
+}
+
+.board__list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.board__button {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--col-font-gray);
+    cursor: pointer;
+    padding: 0.7em 1em;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.board__button:hover {
+    background: var(--col-main-dark);
+    color: var(--col-minor); 
+}
+
+.board__button--active {
+    background: var(--col-main-dark);
+    color: var(--col-minor);
+}
+
+.board__image {
+    display: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.board__image--active {
+    display: block;
+}
+
+.examples__list {
+    width: 373px;
+}
+
+.specification {
+    display: none;
+    width: 100%;
+    height: 450px;
+    border-bottom: 2px solid var(--col-main-dark);
+}
+
+.specification--active {
+    display: block;
+}
+
+.specification__heading {
+    color: var(--col-minor);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.specification__description {
+    color: var(--col-font);
+    max-width: 350px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+}
+
+.specification__induce {
+    color: var(--col-minor);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.product {
+    background: var(--col-bg-dark);
+    border-radius: 4px 4px 0 0;
+    padding: 21px;
+    margin-bottom: 21px;
+}
+
+.product__heading {
+    color: var(--col-minor);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.product__description {
+    color: var(--col-font);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 13px;
+}
+
+.product__author {
+    color: var(--col-font);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.product__icon {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 24px;
+}
+
+.specification__author {
+    color: var(--col-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.product__icon-github {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 18px;
+}
+
+.specification__button {
+    background: var(--col-blue);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    border-radius: 4px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.specification__button:hover {
+    background: var(--col-blue-hov);
+}
+
+.specification__button::before {
+    content: "";
+    height: 100%;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 32px;
+}
+
+.specification__button svg {
+    margin-right: 18px;
 }
