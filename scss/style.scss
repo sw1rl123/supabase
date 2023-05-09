@@ -1,8 +1,18 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    
+    --col-main: #181818;
+    --col-minor: #ffffff;
+    --col-font: #e0e0e0;
+    --col-font-gray: #6a6a6a;
+    --col-button: #24B47E;
+    --col-button-hov: #19815a;
 }
+
+$wrapper-width: 1280px;
+$ui-zindex-1: 1;
+$ui-zindex-2: 2;
+$ui-zindex-3: 3;
 
 *,
 *::before,
@@ -21,6 +31,120 @@ html {
 }
 
 body {
+    font-family: "Roboto";
     font-style: normal;
     overflow-x: hidden;
+    background: var(--col-main);
+}
+
+.header {
+    max-width: $wrapper-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 40px;
+}
+
+.header__logo svg{
+    width: 123px;
+}
+
+.header__logo:hover .logo-letter {
+    fill: var(--col-font-gray);
+}
+
+.logo-letter {
+    fill: var(--col-minor);
+    transition: 0.5s;
+}
+
+.header__link {
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--col-minor);
+    cursor: pointer;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    z-index: $ui-zindex-1;
+    transition: color 0.3s;
+}
+
+.header__link:hover {
+    color: var(--col-font-gray);
+}
+
+.header__link ion-icon {
+    margin-left: 5px;
+}
+
+.header__link-current {
+    margin-left: 70px;
+}
+
+.header__content-wrapper {
+    position: relative;
+}
+
+.burger-menu {
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    color: var(--col-font);
+    padding: 30px 5px 5px 5px;
+    border-radius: 6px;
+    line-height: 1.4;
+    z-index: -1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.burger-menu--close {
+    height: 0px;
+    padding-top: 20px;
+    display: none;
+}
+
+.header__getstarted {
+    max-width: 200px;
+    display: flex;
+}
+
+.header__getstarted .header__link {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.header__getstarted .button {
+    font-size: 12px;
+}
+
+.button {
+    background: var(--col-button);
+    padding: 7px 11px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: var(--col-button-hov);
+    color: white;
 }
