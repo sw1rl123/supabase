@@ -233,6 +233,20 @@ body {
     position: absolute;
     right: 80px;
     top: 0;
+    width: 500px;
+}
+
+@media screen and (max-width: 1250px) {
+    .hero__image {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .hero__image {
+        position: relative;
+        left: 0;
+    }
 }
 
 .benefits {
